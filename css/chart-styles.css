@@ -1,0 +1,89 @@
+/* IIR 2016 Stylesheet - Chart Styles
+*****************************************
+* Created on: 10/25/2016
+* Authored by: Mike DeAngelis
+* Contact Email: mdeange@trasnunion.com
+*****************************************
+*/
+
+
+::-moz-selection { /* Code for Firefox */ color: #000; background: #FCD800; }
+::selection {color: #000; background: #FCD800; }
+	
+body { font-family: IntroRegular,"Trebuchet MS",Helvetica,Arial,sans-serif; }
+
+/*Generic Chart Styles*/
+.chart-container { margin: 30px 0; box-sizing: border-box; }
+.chart svg { -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; border-color: #e5e6e9 #dfe0e4 #d0d1d5; border-image: none; border-radius: 3px; border-style: solid; border-width: 2px; }
+
+    /*Responsive charts*/
+    .svg-container {display: inline-block; position: relative; width: 100%; padding-bottom: 100%; /* aspect ratio */ vertical-align: top; overflow: hidden; }
+    .svg-content-responsive {display: inline-block; position: absolute; top: 10px; left: 0; }
+
+/* Barchart */
+#barchart { background-color: #fff; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-right-colors: none; -moz-border-top-colors: none; border-color: #e5e6e9 #dfe0e4 #d0d1d5; border-image: none; border-radius: 3px; border-style: solid; border-width: 2px; }
+#barchart.chart svg { border: none; } /*Barchart border hack*/
+#barchart .bar { fill: #00a6ca; }
+#barchart .bar.negative { fill: #EB0000 }
+#barchart .bar:hover { fill: #006685; }
+#barchart .bar.negative:hover { fill: #660000; }
+
+#barchart .tooltip { position: absolute; text-align: center; width: 100px; height: 65px; padding: 5px; margin-top: -30px; font-weight: bold; font: 20px IntroRegular,"Trebuchet MS",Helvetica,Arial,sans-serif; background: #fff; border: 3px solid #fcd800; color: #000; pointer-events: none; opacity: 1; }
+#barchart .bar:hover .tooltip { display: inline; }
+
+/* Line Charts */
+.linechart { display: block; /*height: 500px; max-width: 100%;*/ }
+.line { fill: none; stroke-width: 3; opacity: 1; -webkit-transition: background-color 250ms linear; -moz-transition: opacity 250ms linear; -o-transition: opacity 250ms linear; -ms-transition: opacity 250ms linear; transition: opacity 250ms linear; }
+.line.hidden { opacity: 0; }
+.line-point { cursor: pointer; fill: #fff; stroke: #00A6CA; pointer-events: all; opacity: 0; }
+.line-point.active { opacity: 1; }
+
+#linechart-1 { z-index: 1; }
+#linechart-2 .tooltip, #linechart-3 .tooltip  {background: #fff none repeat scroll 0 0; border: 3px solid #fcd800; color: #000; font: 20px IntroRegular,"Trebuchet MS",Helvetica,Arial,sans-serif; margin-top: -30px; opacity: 1; padding: 10px 20px; pointer-events: none; position: absolute; text-align: center; }
+#linechart-2-line { stroke: #e66651; }
+#linechart-3-line { stroke: #bada81; }
+
+.path1 {stroke: #00A6CA; } 
+.path2 {stroke: #006685; }
+
+.axis path { fill: none; stroke: #000; shape-rendering: crispEdges; z-index: 1; }
+.axis text { font-family: IntroRegular,"Trebuchet MS",Helvetica,Arial,sans-serif; font-size: 20px; }
+.axis .x-label { }
+.axis .y-label { }
+
+.grid {  }
+.grid g.tick {stroke: #ddd; opacity: 0.1; z-index: -99; }
+.grid g.tick.zero-axis { opacity: 1; stroke: #000; stroke-width: 2; }
+.grid g.tick.dotted { stroke-dasharray: 5, 5; opacity: 0.2; }
+.grid path {stroke-width: 0; }
+
+/*Chart Legends*/
+.legend { position: absolute; padding: 5px; border: 1px solid #000; background-color: #fff; z-index: 2; }
+.legend ul { list-style: none; margin: 0; padding: 0 0 0 -10px; }
+.legend ul li { position: relative; cursor: pointer; }
+.legend ul li:before { content: ""; height: 15px; width: 15px; position: absolute; border: 1px solid #000; left: -25px; top: 2px; -webkit-transition: background-color 100ms linear; -moz-transition: background-color 100ms linear; -o-transition: background-color 100ms linear; -ms-transition: background-color 100ms linear; transition: background-color 100ms linear;  }
+	.legend ul li#subprime:before { background-color: #e66651; }
+	.legend ul li#nearprime:before { background-color: #f48d4f; }
+	.legend ul li#prime:before { background-color: #fde033; }
+	.legend ul li#primeplus:before { background-color: #bada81; }
+	.legend ul li#superprime:before { background-color: #49bed7; }
+	.legend ul li.unchecked:before { background-color: #fff !important; }
+.legend.linechart1-legend { right: 15px; top: 25px; }
+
+/*Map Styles*/
+.map-title { color: #000; text-transform: uppercase; font-family: IntroCaps,"Trebuchet MS",Helvetica,Arial,sans-serif; font-size: 18px; font-weight: 600; }
+
+.svg-container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* aspect ratio */
+    vertical-align: top;
+    overflow: hidden;
+}
+.svg-content-responsive {
+    display: inline-block;
+    position: absolute;
+    top: 10px;
+    left: 0;
+}

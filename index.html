@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+<!-- Basic Page Needs -->
+<meta charset="utf-8" />
+<title>d3 Projects - Mike DeAngelis</title>
+
+<!-- Metas -->
+<meta name="description" content="Place to show off some d3.js work" />
+<meta name="keywords" content="d3.js, d3" />
+<meta name="author" content="Mike DeAngelis" />
+
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!--CSS-->
+
+<!-- Latest compiled and minified CSS -->
+<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+
+<link rel="stylesheet" href="../resources/css/fonts.css">
+<link rel="stylesheet" href="../resources/css/tu-font-awesome.css">
+<link rel="stylesheet" href="css/bootstrap.css">
+<link rel="stylesheet" href="css/jasny-bootstrap.min.css">
+<link rel="stylesheet" href="css/styles.css?v=1.1">
+<link rel="stylesheet" href="css/chart-styles.css?v=1.5">
+
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script> -->
+
+<!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+<!--Google Map Charts-->
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+</head>
+
+<body>
+<header class="navbar">
+	
+</header>
+
+<section class="main cf">
+	<div class="container">
+		<div class="row">
+
+		<div class="navbar navbar-default navbar-fixed-top ">
+			<div class="container">
+					<button type="button" class="navbar-toggle" id="mobile-nav" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body" data-placement="left">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+				    <span class="icon-bar"></span>
+
+				</button>
+				<div class="navbar-header">
+					<a class="navbar-brand" data-scroll href="https://mjdeangelis.github.io/" target="_blank">Mike DeAngelis | Web Developer</a>
+				</div>
+				<ul class="navbar-nav navbar-right hidden-xs hidden-sm">
+					<!-- <li><a class="btn btn-yellow btn-shadow btn-nav" data-scroll href="#register-form" data-toggle="modal"></a></li> -->
+				</ul>
+			</div>
+		</div>
+
+		<nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+			<ul class="nav nav-tabs">
+			  <li class="navtab tab-home active"><a data-toggle="tab" href="#home"><span>D3 Charts</span></a></li>
+			  <li class="navtab tab-mortgage"><a class="border-right" data-toggle="tab" href="#googleMaps"><span>Google Maps</span></a></li>
+<!-- 			  <li class="navtab tab-auto"><a data-toggle="tab" href="#auto"><span>Tab 3</span></a></li>
+			  <li class="navtab tab-credit"><a class="border-right" data-toggle="tab" href="#credit"><span>Tab 4</span></a></li>
+			  <li class="navtab tab-loans"><a data-toggle="tab" href="#loans"><span>Tab 5</span></a></li> -->
+			</ul>
+					
+		</nav>
+
+		</div> <!--end nav tabs row-->
+
+		<div class="row">
+
+			<div class="tab-content">
+
+			  	<div id="home" class="tab-pane fade in active">
+				  	<div class="home-container">
+
+				  		<div class="col-sm-12">
+				    		<h1 class="title">D3 Projects</h1>
+				    		<p class="subtitle">check out some of my latest work</p>
+				    	</div>
+				    		<div class="row">
+					    	<!--Home first chart row-->
+					    	<div id="barchart-container" class="chart-container col-sm-6">
+					    		<p class="chart-title">Barchart with tooltip</p>
+					    		<div id="barchart" class="chart"></div>
+					    		<p class="chart-description"></p>
+					    		<!-- <p>Originations are viewed one quarter in arrears to ensure all accounts are included.</p> -->
+					    	</div>
+					    	<div id="linechart-1-container" class="chart-container col-sm-6">
+					    		<div class="legend linechart1-legend">
+						    		<ul>
+						    			<li id="subprime" class="legend-item">Line 1</li>
+						    			<li id="nearprime" class="legend-item">Line 2</li>
+						    			<li id="prime" class="legend-item">Line 3</li>
+						    			<li id="primeplus" class="legend-item">Line 4</li>
+						    			<li id="superprime" class="legend-item">Line 5</li>
+						    		</ul>
+					    		</div>
+					    		<p class="chart-title">Multi-line chart</p>
+					    		<div id="linechart-1" class="chart"></div>
+					    		<p class="chart-description"></p>
+					    	</div>
+				    	</div>
+				    	<div class="row">
+					    	<!--Home second chart row-->
+					    	<div id="linechart-2-container" class="chart-container col-sm-6">
+					    		<p class="chart-title">Consumers with a Balance in Q3</p>
+					    		<div id="linechart-2" class="chart"></div>
+					    		<p class="chart-description">chart description</p>
+					    	</div>
+					    	<div id="linechart-3-container" class="chart-container col-sm-6">
+					    		<p class="chart-title">Total Balances ($B) in Q3</p>
+					    		<div id="linechart-3" class="chart"></div>
+					    		<p class="chart-description">chart description</p>
+					    	</div>
+				    	</div>
+				    </div>
+				</div> <!--end home tab-->
+
+
+			  	<div id="googleMaps" class="tab-pane">
+
+			  		<div class="col-sm-12">
+				    	<h1 class="title">Google Map Projects</h1>
+				    	<p class="subtitle">they're also responsive</p>
+				    	<!-- <div class="loading"><img alt="loading wheel" src="img/ajax-loader.gif" /></div> -->
+				    </div>
+				    <div class="map-container col-sm-12">
+				    	<h2 class="map-title">Map of US - 1</h2>
+				    	<div id="mortgageMap" class="visualization-map showDesktop"></div>
+				    </div>
+				    <div class="map-container col-sm-12">
+				    	<h2 class="map-title">Map of US - 2</h2>
+				    	<div id="mortgageMap2" class="visualization-map showDesktop" style="margin: 0 auto;"></div>
+				    </div>
+
+			  	</div>
+
+			</div> <!--end tab content-->
+
+		</div> <!--end row-->
+
+	</div> <!--end container-->
+
+</section>
+
+<footer id="footer" class="container-fluid text-center">
+	<div class="row">
+		<div class="col-sm-12 col-lg-8 col-lg-offset-2 text-center">
+			<div class="footer-copy">
+				Mike DeAngelis | Web Developer
+			</div>
+		</div>
+	</div>
+	</div>
+</footer>
+
+<!--CDN versions-->
+<!-- <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+<script src="http://d3js.org/d3.v4.min.js"></script>-->
+
+
+<script src="js/jquery.js"></script>
+<script src="js/smooth-scroll.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jasny-bootstrap.min.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<!--D3 Charts-->
+<script src="js/d3-v4.js"></script>
+<script src="js/d3.legend.js"></script>
+<script src="js/barchart-scripts.js?v=16.35"></script>
+<script src="js/linechart1-scripts.js?v=16.35"></script>
+<script src="js/linechart-scripts.js?v=16.35"></script>
+<script src="js/mobile-data.js?v=16.32"></script>
+<!--Google Maps-->
+<script src="js/map.js?v=16.35"></script>
+<script src="js/arrive.js"></script>
+
+<script>
+  //   	smoothScroll.init({
+		//     speed: 750,
+		//     easing: 'easeInQuad', // Easing pattern to use
+		//     updateURL: true
+		// });
+
+$(document).ready(function(){
+	 
+	//Bolding 0 grid lines
+	$('#bar-y-grid g.tick:nth-child(2)').attr("class", "tick zero-axis");
+	$('#line1-y-grid g.tick:nth-child(4)').attr("class", "tick zero-axis");
+	
+	$('#mobile-nav').click(function(){
+		$(this).toggleClass('open');
+	});
+	
+	$(".navtab").click(function() { 
+		 if ($(".navmenu").hasClass("canvas-slid")) {
+		   $('#myNavmenu').offcanvas('hide');
+		   $('.navbar-toggle').toggleClass('open');
+	 }		
+	});
+	
+	$(".navbar-right.hidden-md").click(function() { 
+		 if ($(".navmenu").hasClass("canvas-slid")) {
+			$('#register-form').removeClass('canvas-slid'); 
+			$('#register-form').css({'left':'auto', 'right':'auto'}); 
+		   $('#myNavmenu').offcanvas('hide');
+		   $('.navbar-toggle').toggleClass('open');
+	 }		
+	});
+
+});
+  
+
+	</script> 
+<!--<script src="../resources/js/vendor/jquery-2.2.3.min.js"></script>-->
+</body>
+</html>
