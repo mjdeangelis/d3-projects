@@ -355,13 +355,13 @@ $(document).ready(function() {
 
                 var tabValue = $(this).attr('href');
 
-                if (tabValue === "#mortgage") {
+                if (tabValue === "#googleMaps") {
                     $("#mortgageMap.visualization-map").css("display", "block");
                     $("#mortgageMap2.visualization-map").css("display", "block");
                     $(".loading").css("display", "none");
 
                     //wait for tab to be shown before drawing map
-                    $('a[href="#mortgage"]').on('shown.bs.tab', function() {
+                    $('a[href="#googleMaps"]').on('shown.bs.tab', function() {
                         $(".loading").css("display", "none");
                         drawMortgageDelMap();
                         drawMortgageBalMap();
